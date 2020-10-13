@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-r"""ydeos_benchmark's setup.py."""
+r"""ydeos_benchmark setup.py."""
 
 from distutils.core import setup
 
