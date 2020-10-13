@@ -23,4 +23,4 @@ def test_func_n_times():
     assert len(the_list) == 10
 
     func_n_times(g, [the_list], {}, n_times=10)
-    assert the_list is False  # the list should be empty
+    assert not the_list  # the list should be empty
