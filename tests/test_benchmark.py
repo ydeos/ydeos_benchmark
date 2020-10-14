@@ -2,7 +2,8 @@
 
 r"""Tests for benchmark.py."""
 
-from ydeos_benchmark.benchmark import func_n_times
+from ydeos_benchmark.benchmark import func_n_times, benchmark_simple, \
+    benchmark_complete, run_benchmark_simple, run_benchmark_complete
 
 
 def f(a_list):
@@ -24,3 +25,28 @@ def test_func_n_times():
 
     func_n_times(g, [the_list], {}, n_times=10)
     assert not the_list  # the list should be empty
+
+
+def test_benchmark_simple():
+    r"""Simple benchmark happy path"""
+    name, time_ = benchmark_simple(f, [[1, 2]], {}, n_times=100)
+    assert name == "f"
+    assert time_ >= 0
+
+
+def test_run_benchmark_simple():
+    r"""Simple benchmark run happy path"""
+    return_value = run_benchmark_simple(((f, [[1, 2]], {}), ), n_times=100)
+    assert return_value is None
+
+
+def test_benchmark_complete():
+    r"""Complete benchmark happy path"""
+    return_value = benchmark_complete(f, [[1, 2]], {}, n_times=100)
+    assert return_value is None
+
+
+def test_run_benchmark_complete():
+    r"""Complete benchmark run happy path"""
+    return_value = run_benchmark_complete(((f, [[1, 2]], {}), ), n_times=100)
+    assert return_value is None
