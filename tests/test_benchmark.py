@@ -36,17 +36,14 @@ def test_benchmark_simple():
 
 def test_run_benchmark_simple():
     r"""Simple benchmark run happy path"""
-    return_value = run_benchmark_simple(((f, [[1, 2]], {}), ), n_times=100)
-    assert return_value is None
+    assert run_benchmark_simple(((f, [[1, 2]], {}), ), n_times=100) is None
 
 
 def test_benchmark_complete():
     r"""Complete benchmark happy path"""
-    return_value = benchmark_complete(f, [[1, 2]], {}, n_times=100)
-    assert return_value is None
+    assert benchmark_complete(f, [[1, 2]], {}, n_times=100) is None
 
 
 def test_run_benchmark_complete():
     r"""Complete benchmark run happy path"""
-    return_value = run_benchmark_complete(((f, [[1, 2]], {}), ), n_times=100)
-    assert return_value is None
+    assert run_benchmark_complete(((f, [[1, 2]], {}), ), n_times=100) is None
