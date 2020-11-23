@@ -11,5 +11,35 @@ ydeos_benchmark
     :target: https://coveralls.io/github/ydeos/ydeos_benchmark?branch=main
 
 
-Benchmarking utilities for performance regression tests
+**ydeos_benchmark** is a set of benchmarking utilities for performance regression tests.
+
+Its goal is to monitor the performance of other projects against a reference in order to make sure the performance does not deteriorate version after version.
+
+Install
+-------
+
+.. code-block:: shell
+
+   git clone https://github.com/ydeos/ydeos_benchmark
+   cd ydeos_benchmark
+   python setup.py install
+
+
+Examples
+--------
+
+See the examples_ folder.
+
+
+.. _examples: https://github.com/ydeos/ydeos_benchmark/tree/main/examples
+
+
+Contribute
+----------
+
+Please open an issue if you find a bug or if you come up with ideas about how to improve the project.
+
+Then: fork, feature branch and open a pull request. Feel free to contribute!
+
+
 
